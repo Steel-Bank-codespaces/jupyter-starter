@@ -52,9 +52,11 @@ RUN python -m pip install --upgrade pip \
     jupyterlab-git jupyter-videochat jupyterlab_latex \
     jupyterlab-spellchecker \
     jupyterlab-code-formatter \
+    jupyterlab-spreadsheet-editor ipysheet\
     sidecar \
     && jupyter labextension install plotlywidget \
-    && jupyter labextension install jupyter-webrtc
+    && jupyter labextension install jupyter-webrtc \
+    && jupyter labextension install jupyterlab-spreadsheet
 
 # Make sure we save widgets. why would you not want this?    
 RUN mkdir -p /home/vscode/.jupyter/lab/user-settings/@jupyter-widgets/jupyterlab-manager/ \
