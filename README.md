@@ -11,7 +11,11 @@ See [citation example](./examples/citations.ipynb).
 
 ## Spreadsheet / tabular data editing
 
+You can edit csv files in a spreadsheet like interface. See [csv example](./examples/read-write-csv.ipynb).
+
 ## Spell checker
+
+A spell-checker is enabled. In Markdown cells, misspelled words will appear with a pink background. You can right click on them for suggested corrections. 
 
 ## PDF export via LaTeX and WebPDF
 
