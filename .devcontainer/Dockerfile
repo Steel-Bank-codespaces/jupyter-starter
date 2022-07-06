@@ -16,7 +16,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 # These packages are to get PDF export via LaTeX (minimal) and via webpdf
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends pandoc \
-     texlive-xetex texlive-fonts-recommended texlive-plain-generic \
+     texlive-xetex texlive-fonts-recommended texlive-plain-generic latexmk\
      xorg xvfb gtk2-engines-pixbuf \
      dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable \
      libnss3-dev libxss1 libcups2 libasound2 libpangocairo-1.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk-3-0 \
