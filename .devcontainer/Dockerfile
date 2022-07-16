@@ -60,7 +60,11 @@ RUN python -m pip install --upgrade pip \
     && pip install jupyterlab_markup \
     && pip install aquirdturtle_collapsible_headings \
     && pip install 'jupyterlab>=3.0.0,<4.0.0a0' jupyterlab-lsp \
-    && pip install 'python-lsp-server[all]' 
+    && pip install 'python-lsp-server[all]' \
+    && pip install jupyterlab-snippets \
+    && mkdir -p /home/vscode/.local/share/jupyter
+
+COPY .devcontainer/snippets /home/vscode/.local/share/jupyter
 
 # Make sure we save widgets. why would you not want this?    
 RUN mkdir -p /home/vscode/.jupyter/lab/user-settings/@jupyter-widgets/jupyterlab-manager/ \
