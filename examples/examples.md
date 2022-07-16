@@ -1,29 +1,9 @@
----
-references:
-  - id: fenner2012a
-    title: One-click science marketing
-    author:
-      - family: Fenner
-        given: Martin
-    container-title: Nature Materials
-    volume: 11
-    URL: "https://dx.doi.org/10.1038/nmat3283"
-    DOI: 10.1038/nmat3283
-    issue: 4
-    publisher: Nature Publishing Group
-    page: 261-263
-    type: article-journal
-    issued:
-      year: 2012
-      month: 3
----
-
 Some title
 ==========
 
 # Introduction
 
-yada ua. Blah blah [@fenner2012a]. These do not work yet.
+yada ua.
 
 # Methods
 
@@ -44,6 +24,8 @@ there you have it.
 # Fancier markdown
 
 From https://github.com/agoose77/jupyterlab-markup
+
+This seems promising that you can add features to markdown. 
 
 ## Definition Lists
 
@@ -77,9 +59,24 @@ graph TD;
      '
 ```
 
-## Footnotes
+## Using Footnotes
 
 Here is a footnote reference,[^1] and another.[^longnote]
+
+This is one way to do references for now. See [^1] again. And later, see [^longnote]. that looks kind of odd. [^longnote] it seems to keep a counter?
+
+
+# Wish list
+
+1. Collapsible headings
+2. citations and bibliography
+3. Custom links that are clickable, with tooltips.
+4. export of a Markdown file to PDF, probably via pandoc (see https://github.com/jupyterlab/jupyterlab/issues/4676 for options)
+5. some editing sugar in this. Basically anything...
+
+
+
+# Footnotes
 
 [^1]: Here is the footnote.
 

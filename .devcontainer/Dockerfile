@@ -56,7 +56,11 @@ RUN python -m pip install --upgrade pip \
     sidecar \
     && jupyter labextension install plotlywidget \
     && jupyter labextension install jupyter-webrtc \
-    && jupyter labextension install jupyterlab-spreadsheet
+    && jupyter labextension install jupyterlab-spreadsheet \
+    && pip install jupyterlab_markup \
+    && pip install aquirdturtle_collapsible_headings \
+    && pip install 'jupyterlab>=3.0.0,<4.0.0a0' jupyterlab-lsp \
+    && pip install 'python-lsp-server[all]' 
 
 # Make sure we save widgets. why would you not want this?    
 RUN mkdir -p /home/vscode/.jupyter/lab/user-settings/@jupyter-widgets/jupyterlab-manager/ \
