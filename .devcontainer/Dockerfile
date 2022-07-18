@@ -58,13 +58,14 @@ RUN python -m pip install --upgrade pip \
     && jupyter labextension install jupyter-webrtc \
     && jupyter labextension install jupyterlab-spreadsheet \
     && pip install jupyterlab_markup \
-    && pip install aquirdturtle_collapsible_headings \
-    && pip install 'jupyterlab>=3.0.0,<4.0.0a0' jupyterlab-lsp \
+    && pip install jupyterlab-lsp==3.10.1 jupyter-lsp==1.5.1 \
     && pip install 'python-lsp-server[all]' \
     && pip install jupyterlab-snippets \
     && mkdir -p /home/vscode/.local/share/jupyter
 
-COPY .devcontainer/snippets /home/vscode/.local/share/jupyter
+COPY .devcontainer/pycodestyle /home/vscode/.config/pycodestyle
+
+COPY .devcontainer/snippets /home/vscode/.local/share/jupyter/snippets
 
 # Make sure we save widgets. why would you not want this?    
 RUN mkdir -p /home/vscode/.jupyter/lab/user-settings/@jupyter-widgets/jupyterlab-manager/ \
