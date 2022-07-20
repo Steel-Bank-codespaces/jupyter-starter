@@ -5,6 +5,10 @@ You should probably not modify this repo with code files unless they are example
 
 # Features
 
+## Uses a custom Docker image from Docker hub
+
+The Docker image is built here, but is pulled from Docker HUB. 
+
 ## LaTeX with citations
 
 See [citation example](./examples/citations.ipynb).
