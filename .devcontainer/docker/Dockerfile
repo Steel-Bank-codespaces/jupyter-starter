@@ -31,7 +31,8 @@ RUN python -m pip install --upgrade pip \
 	&& jupyter labextension install plotlywidget \
 	&& jupyter labextension install jupyter-webrtc \
 	&& pip install jupyterlab-link-share \
-	&& jupyter server extension disable nbclassic
+	&& jupyter server extension disable nbclassic \
+	&& pip install https://github.com/jkitchin/jupyterlab_discord/archive/refs/heads/main.zip
 
 # We are in the notebook user now
 USER ${NB_UID}
